@@ -1,0 +1,28 @@
+#monaire1,
+#monaire2 {
+    display:block;
+    margin-bottom:20px;
+    width:150px;
+    height:150px;
+    border: 1px solid green;
+    background-color: aqua;
+    padding: 10px;
+    line-height: 1.5;
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+.paragraphe{
+    width:50px;
+    height:50px;
+}
+
+.bordure{
+    border: solid 2px red;
+}
+
+#paragraphe2{
+    width:50px;
+    height:50px;
+    background-color: teal;
+}
