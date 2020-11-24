@@ -5,24 +5,41 @@
     width:150px;
     height:150px;
     border: 1px solid green;
-    background-color: aqua;
     padding: 10px;
     line-height: 1.5;
     font-size: .8rem;
     letter-spacing: 1px;
 }
 
-.paragraphe{
-    width:50px;
-    height:50px;
+.bg{
+    background-color: tomato;
+    color:#fff;
 }
 
-.bordure{
-    border: solid 2px red;
+div {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
 }
 
-#paragraphe2{
-    width:50px;
-    height:50px;
-    background-color: teal;
+p {
+    margin-top: 20px;
+    border: 2px solid red;
+    padding: 5px;
+}
+
+.orange {
+    background-color: orange;
+    color : blue;
+}
+
+
+.div2 {
+    background-color: orange;
+    color: black;
+}
+
+.newcolor {
+    background-color: blue;
+    color: white;    
 }

@@ -8,25 +8,25 @@ $(function(){
 
     var div1 = $('#monaire1'),
         div2 = $('#monaire2'),
-        paragraphe = $('.paragraphe');
+        p1 = $('#paragraphe1'),
+        p2 = $('#paragraphe2');
         
-
-    $('button').on(click, function(e){
-        $(div1).css("border","solid 2px red");
-        $(div2).addClass(paragraphe);
-
-        e.preventDefault();
-    });
+        $("#bouton").click(function(){
+            //$("textarea").add("#paragraphe1').add("#paragraphe2').css({border:'2px solid red'});
+            $("textarea").add("p").css({border:'2px solid red'});    
+        });
 /*
 Exercice 2 : add() et appendTo()
 Créer un élément contenant du texte ajouté après un paragraphe
 */
 
-    var div3 = $('#paragraphe2').text("du texte à ajouté dans ce nouveau paragraphe");
+//$("#paragraphe1").add("<p>Hello</p>").appendTo(document.body);
+//$("#paragraphe1").add("<p>Hello</p>").appendTo("#paragraphe1");
+//$("#paragraphe1").add("<p>Hello</p>").appendTo("#paragraphe2");
+//$("#paragraphe1").add("<p>Hello</p>").appendTo("#paragraphe1");
 
-    $('button').on(click, function(){
-        $(div3).appendTo(div2);
-    });
+    $(p1).add("<p>hello</p>").appendTo(p1);
+
 
 /*
 Exercice 3 :  click(), css() et html()
@@ -38,7 +38,10 @@ Exemple de quatre div : 
 <div style="background-color:#a11;"></div>
 */
 
-
+$("div").click(function(){
+    let color = $(this).css("background-color");
+    $("p").html("La couleur du DIV cliqué est : " + color);
+});
 
 
 
@@ -52,6 +55,7 @@ Exemple :
 */
 
 
+$("p").last().addClass("orange");
 
 
 /*
@@ -59,7 +63,9 @@ Exercice 5 : click(), addClass()
 Changer la couleur du texte et du fond d'un div au clic sur un bouton.
 */
 
-
+$(".bout").click(function(){
+    $(".div2").addClass("newcolor");
+});
 
 
 /*
@@ -68,7 +74,9 @@ Ajouter du texte après un paragraphe au clic sur un bouton.
 */
 
 
-
+$('button').click(function(){
+    $(p2).after("<p>bye</p>");
+});
 
 
 });
