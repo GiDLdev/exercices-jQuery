@@ -1,3 +1,7 @@
+/*PARTIE I*/
+
+/*
+
 #monaire1,
 #monaire2 {
     display:block;
@@ -43,3 +47,14 @@ p {
     background-color: blue;
     color: white;    
 }
+
+*/
+
+
+/*PARTIE II*/
+div.blou{
+    width:40px;
+    height:40px;
+    background-color: blue;
+}
+
