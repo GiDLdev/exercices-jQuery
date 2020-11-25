@@ -47,14 +47,115 @@ p {
     background-color: blue;
     color: white;    
 }
-
 */
 
 
+
 /*PARTIE II*/
-div.blou{
-    width:40px;
-    height:40px;
+/*exercice 1*/
+#blou{
+    position:relative;
+    margin-top:20px;
+    width:100px;
+    height:100px;
     background-color: blue;
+}
+
+
+
+/*exercice 2*/
+
+
+#bouton2{
+    margin-top:100px;
+}
+
+#div1{
+    position:relative;
+    margin-top:20px;
+    width:100px;
+    height:100px;
+    background-color: blue;
+}
+
+#div2{
+    position:relative;
+    margin-top:20px;
+    width:100px;
+    height:100px;
+    background-color: orangered;
+}
+
+#div3{
+    position:relative;
+    margin-top:20px;
+    width:100px;
+    height:100px;
+    background-color:greenyellow;
+}
+
+.rose{
+    background-color: hotpink;
+}
+
+.violet{
+    background-color: purple;
+}
+
+
+
+/*exercice 3*/
+
+#bouton3{
+    margin-top:100px;
+}
+
+#box{
+    position:relative;
+    margin-top:100px;
+    width:50px;
+    height:50px;
+    background-color: green;
+}
+
+
+/*exercice 4*/
+#bouton4{
+    margin-top:100px;
+}
+
+#boite{
+    position:relative;
+    width:80px;
+    height:80px;
+    background-color: red;
+}
+
+
+/*exercice 5*/
+#bouton5{
+    margin-top:100px;
+}
+
+#paquet{
+    position:relative;
+    width:80px;
+    height:80px;
+    background-color: pink;
+}
+
+
+/*exercice 6*/
+#bouton6{
+    margin-top:100px;
+}
+
+#fantome{
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+    float: left;
+    background: green;
+    margin-bottom: 300px;
 }
 

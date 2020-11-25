@@ -1,11 +1,12 @@
+$(function(){
+    
 /*
 Exercice 1 :  click(), css() et add()
 Créer une bordure rouge de 2px autour de deux textareas qui s'affichera au clic sur un bouton.
 Puis ajouter deux paragraphes à l'objet jQuery avec une bordure rouge de 2px au clic sur le même bouton.
 */
 
-/*$(function(){
-
+/*
     var div1 = $('#monaire1'),
         div2 = $('#monaire2'),
         p1 = $('#paragraphe1'),
@@ -28,10 +29,11 @@ Créer un élément contenant du texte ajouté après un paragraphe
 //$("#paragraphe1").add("<p>Hello</p>").appendTo("#paragraphe2");
 //$("#paragraphe1").add("<p>Hello</p>").appendTo("#paragraphe1");
 
- /*  
+/*
+ 
 $(p1).add("<p>hello</p>").appendTo(p1);
-*/
 
+*/
 //--------------------------------------------------------------------------------------------------------------------------------------
 /*
 Exercice 3 :  click(), css() et html()
@@ -96,44 +98,86 @@ $('button').click(function(){
 Exercice 1 :  Animer par un déplacement de 50 px une div de gauche à droite puis de droite à gauche.
 */
 
-$(".blou").animate({transform: 'translateX(50px)'}, function(){
-    $(".blou").animate({transform: 'translateX(-50px)'})
+$('button').click(function(){
+    $("#blou").animate({left: '50px'}, slow)
+              .animate({left: '-50px'}, slow);
+});
 
-},1000 );
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 /*
-Exercice 2 : Animer 2 divs sur 3 avec la méthode .slideToggle(), créer un bouton qui change la couleur des 2 divs animées en utilisant la méthode toggleClass().
+Exercice 2 : Animer 2 divs sur 3 avec la méthode .slideToggle(), 
+créer un bouton qui change la couleur des 2 divs animées en utilisant la méthode toggleClass().
 */
 
 
-
+$('#bouton2').click(function(){
+    $("#div2").slideToggle(slow).queue(function(){$(this).toggleClass("rose")});
+    $("#div3").slideToggle(slow).queue(function(){$(this).toggleClass("violet")});
+});
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 /*
 Exercice 3 : Animer un élément "box" en changeant sa hauteur et sa largeur puis réinitialiser.
 */
 
-
+$('#bouton3').click(function(){
+    $("#box").animate({
+                height: '+=100px',
+                width: '+=80px'
+    }, 5000, function(){
+        $("#box").stop(true, true);
+    });
+});
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 /*
 Exercice 4 : Faire apparaître ou disparaître un élément en 3 secondes en utilisant .fadeIn() et .fadeOut().
 */
-
+$('#bouton4').click(function(){
+    $("#boite").fadeOut(3000, function(){
+        $(this).fadeIn(3000);
+    });
+});
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 /*
 Exercice 5 : Faire apparaître ou disparaître un élément avec un intervalle d'une seconde en utilisant setInterval().
 */
+$('#bouton5').click(function(){
+    clearInterval(magie);
 
-
+    function magie(){
+        $("#paquet").fadeOut(3000, function(){
+            $(this).fadeIn(3000);
+        });
+    }
+    var intervalFade = setInterval(magie, 3000);
+});
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 /*
 Exercice 6 : Faire apparaître ou disparaître un élément avec l'effet "Toggle" après l'avoir activé ou désactivé en utilisant .fx.off.
 */
+
+var toggleFx = function() {
+    $.fx.off = !$.fx.off;
+    };
+
+toggleFx();
+$("#bouton6").click(toggleFx);
+$("input").click(function(){
+    $("#fantome").toggle("slow");
+});
+
+
+
+
+
+
+
+});
