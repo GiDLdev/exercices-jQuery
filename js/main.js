@@ -98,12 +98,22 @@ $('button').click(function(){
 Exercice 1 :  Animer par un déplacement de 50 px une div de gauche à droite puis de droite à gauche.
 */
 
-$('button').click(function(){
-    $("#blou").animate({left: '50px'}, slow)
-              .animate({left: '-50px'}, slow);
+$("#bouton1a").click(function() {
+    $(".block").animate({ left: "-=50px" }, "slow");
 });
 
+$("#bouton1b").click(function() {
+    $(".block").animate({ left: "+=50px" }, "slow");
+});
 
+$("#bouton1c").click(function() {
+    $(".block").animate({ top: "-=50px" }, "slow");
+});
+
+$("#bouton1d").click(function() {
+    $(".block").animate({ top: "+=50px" }, "slow");
+
+});
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 /*
@@ -112,24 +122,37 @@ créer un bouton qui change la couleur des 2 divs animées en utilisant la méth
 */
 
 
-$('#bouton2').click(function(){
-    $("#div2").slideToggle(slow).queue(function(){$(this).toggleClass("rose")});
-    $("#div3").slideToggle(slow).queue(function(){$(this).toggleClass("violet")});
+$("#bouton2").click(function() {
+    $("div:animated").toggleClass("colored ");
+    //$(".divAnime").slideToggle(5000);
 });
+
+let animateIt = function() {
+    $("#div1,#div2").slideToggle("slow", animateIt);
+}
+
+animateIt();
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 /*
 Exercice 3 : Animer un élément "box" en changeant sa hauteur et sa largeur puis réinitialiser.
 */
 
-$('#bouton3').click(function(){
+$("#bouton3a").click(function() {
     $("#box").animate({
-                height: '+=100px',
-                width: '+=80px'
-    }, 5000, function(){
-        $("#box").stop(true, true);
-    });
+        height: "300px",
+        width: "100px",
+        backgroundColor: "purple",
+    }, 1500);
 });
+
+$("#bouton3b").click(function() {
+    $("#box").animate({
+        height: "200px",
+        width: "200px",
+        backgroundColor: "rgb(134, 0, 22)",
+    }, 1500);
+}); 
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------
@@ -141,6 +164,20 @@ $('#bouton4').click(function(){
         $(this).fadeIn(3000);
     });
 });
+/* 
+// correction
+
+$('#btn1').click(function() {
+    $('div').fadeOut(3000)
+});
+
+$('#btn2').click(function() {
+    $('div').fadeIn(3000)
+}); 
+
+*/
+
+
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------
@@ -157,6 +194,17 @@ $('#bouton5').click(function(){
     }
     var intervalFade = setInterval(magie, 3000);
 });
+
+
+/* 
+//correction
+
+$('button').click(function() {
+    setInterval(function() {
+        $('div').toggle(2000);
+    }, 3000);
+}); 
+*/
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------

@@ -53,12 +53,13 @@ p {
 
 /*PARTIE II*/
 /*exercice 1*/
-#blou{
-    position:relative;
-    margin-top:20px;
-    width:100px;
-    height:100px;
-    background-color: blue;
+.blou{
+    position: relative;
+    background-color: #B0E0E6;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+    margin: 25px;
 }
 
 
@@ -67,7 +68,7 @@ p {
 
 
 #bouton2{
-    margin-top:100px;
+    margin-top:300px;
 }
 
 #div1{
@@ -113,9 +114,9 @@ p {
 #box{
     position:relative;
     margin-top:100px;
-    width:50px;
-    height:50px;
-    background-color: green;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(134, 0, 22);
 }
 
 
